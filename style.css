@@ -527,7 +527,7 @@
 
  .testimonial-title {
      text-align: center;
-     font-family: 'scotch', Georgia, serif;
+     font-family: 'scotch-bd', Georgia, serif;
      font-size: 56px;
      font-weight: bold;
      color: #736251;
@@ -654,7 +654,7 @@
  }
 
  .faq-title {
-     font-family: 'scotch', Georgia, serif;
+     font-family: 'scotch-bd', Georgia, serif;
      font-size: 56px;
      color: #FB3719;
      text-align: center;
@@ -1177,7 +1177,7 @@
      }
 
      .testimonial-title {
-         font-size: 34px;
+        font-size: 34px;
          margin-bottom: 30px;
      }
 
