@@ -1,23 +1,20 @@
 
-// PORTFOLIO
 const showMoreBtn = document.getElementById("showMoreBtn");
 const portfolioGrid = document.querySelector(".portfolio-grid");
 
-showMoreBtn.addEventListener("click", function () {
-    portfolioGrid.classList.toggle("expanded");
-    showMoreBtn.classList.toggle("expanded");
+if (showMoreBtn && portfolioGrid) {
+    showMoreBtn.addEventListener("click", function () {
+        portfolioGrid.classList.toggle("expanded");
+        showMoreBtn.classList.toggle("expanded");
 
-    const isExpanded = portfolioGrid.classList.contains("expanded");
+        const isExpanded = portfolioGrid.classList.contains("expanded");
 
-    showMoreBtn.querySelector("span").textContent =
-        isExpanded ? "Show Less" : "Show More";
-});
+        showMoreBtn.querySelector("span").textContent =
+            isExpanded ? "Show Less" : "Show More";
 
-
-console.log("Hello world!")
-
-
-// TESTIMONIAL
+        showMoreBtn.setAttribute("aria-expanded", String(isExpanded));
+    });
+}
 
 const testimonialGrid = document.querySelector(".testimonial-grid");
 const prevBtn = document.querySelector(".testimonial-arrow.prev");
@@ -49,20 +46,19 @@ if (prevBtn && nextBtn && testimonialGrid) {
     });
 }
 
-
-
-// FAQ
-
 const faqItems = document.querySelectorAll(".faq-item");
 
 faqItems.forEach(function (item) {
     const question = item.querySelector(".faq-question");
+
+    if (!question) return;
 
     question.addEventListener("click", function () {
         const isActive = item.classList.contains("active");
 
         faqItems.forEach(function (faq) {
             faq.classList.remove("active");
+
             faq.querySelector(".faq-question")
                 .setAttribute("aria-expanded", "false");
         });
