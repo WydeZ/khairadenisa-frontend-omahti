@@ -957,7 +957,7 @@
      transition: transform 0.2s ease;
  }
 
- .footer-social-icons img:hover {
+ .footer-social-icons img:hover, .hero-socials img:hover{
      transform: translateY(-5px);
  }
 
